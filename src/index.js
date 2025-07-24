@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     continueBtn.addEventListener('click', () => {
     introSection.classList.add('d-none');
     swiperSection.classList.remove('d-none');
+    enableMusicPlaybackOnUserInteraction();
 
     // Inicia Swiper vertical
     const swiper = new Swiper('.swiper', {
@@ -29,3 +30,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     });
 });
+
+function enableMusicPlaybackOnUserInteraction() {
+  const bgMusic = document.getElementById('bgMusic');
+
+  function playMusicOnce() {
+    // Remove o listener para evitar múltiplas execuções
+    document.removeEventListener('click', playMusicOnce);
+    document.removeEventListener('touchstart', playMusicOnce);
+
+    if (bgMusic) {
+      bgMusic.play().catch((err) => {
+        console.warn("Música não pôde ser reproduzida:", err);
+      });
+    }
+  }
+
+  // Aguarda qualquer interação do usuário
+  document.addEventListener('click', playMusicOnce);
+  document.addEventListener('touchstart', playMusicOnce);
+}
