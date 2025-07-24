@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pra ela, com carinho</title>
+  <link rel="shortcut icon" href="./src/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./src/index.css">
+  <!-- Bootstrap CSS (para utilitários) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <!-- 🎵 Música -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="./src/music.mpeg" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+
+  <div id="introSection" class="intro fade-in">
+    <img src="./src/image.jpeg" alt="Imagem de introdução" style="width: 300px; height: 300px; margin-bottom: 10px;" />
+    <h1 class="highlight display-5">Bem-vinda 💖</h1>
+    <p class="mt-3" style="color: darkgray;">Em uma data especial, pra pessoa mais especial da minha vida. Preparei isso com cuidado e carinho só pra ti...</p>
+    <button id="continueBtn" class="fade-in-delay">Toque para continuar</button>
+  </div>
+
+
+  <div id="swiperSection" class="d-none">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <img src="./src/image.jpeg" alt="Imagem 1" />
+          <p class="slide-text">Esse é o começo de algo lindo...</p>
+        </div>
+
+
+        <div class="swiper-slide">
+          <img src="./src/image.jpeg" alt="Imagem 2" />
+          <p class="slide-text">Cada momento com você é único 💫</p>
+        </div>
+
+
+        <div class="swiper-slide">
+          <img src="./src/image.jpeg" alt="Imagem 3" />
+          <p class="slide-text">Você ilumina meus dias como ninguém 🌟</p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./src/index.js"></script>
+</body>
+</html>
